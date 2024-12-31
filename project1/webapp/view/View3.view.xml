@@ -1,0 +1,60 @@
+<mvc:View controllerName="oasis.project1.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" 
+    xmlns:form="sap.ui.layout.form" 
+    xmlns:layout="sap.ui.layout"
+    xmlns:microchart="sap.suite.ui.microchart" 
+    xmlns:unified="sap.ui.unified" 
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" 
+    xmlns:viz.data="sap.viz.ui5.data" >
+   <Page title="Title">
+				<content>
+					<form:SimpleForm title="New Header Record" layout="ResponsiveGridLayout">
+						<Label text="Enter Userid" textDirection="RTL" design="Bold"/>
+						<Input id="myuserid1" value="" width="200px"/>
+						<Label text="Enter Firstname" textDirection="RTL" design="Bold"/>
+						<Input id="myfname1" value="" width="200px"/>
+						<Label text="Enter Lastname" textDirection="RTL" design="Bold"/>
+						<Input id="mylname1" value="" width="200px"/>
+						<Label text="Enter Emailid" textDirection="RTL" design="Bold"/>
+						<Input id="myemailid1" value="" width="200px"/>
+						<Label text="Enter Country" textDirection="RTL" design="Bold"/>
+						<Input id="mycountry2" value="" width="200px"/>
+						<Label text="Enter Salary" textDirection="RTL" design="Bold"/>
+						<Input id="mysalary2" value="" width="200px"/>
+						<Label text="Enter Phone Number" textDirection="RTL" design="Bold"/>
+						<Input id="myphone1" value="" width="200px"/>
+					</form:SimpleForm>
+					<Table id="myitemstable" items="{/data}" headerText="New Item Records" width="800px" fixedLayout="false">
+						<columns>
+							<Column>
+								<Label text="Userid" design="Bold"/>
+							</Column>
+							<Column>
+								<Label text="ProductID" design="Bold"/>
+							</Column>
+							<Column>
+								<Label text="ProductName" design="Bold"/>
+							</Column>
+							<Column>
+								<Label text="ProductPrice" design="Bold"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Input value="{Userid}"/>
+									<Input value="{Productid}"/>
+									<Input value="{Productname}"/>
+									<Input value="{Productprice}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Label text=""/>
+					<Button text="Insert Header + Items" type="Accept" width="250px" press="insertheaderitemsEH"/>
+				</content>
+			</Page>
+</mvc:View>

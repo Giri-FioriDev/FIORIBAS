@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="oasis.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:layout="sap.ui.layout"
+    xmlns:microchart="sap.suite.ui.microchart"
+    xmlns:unified="sap.ui.unified"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+>
+    <Page title="Nested View">
+        <content>
+            <List
+                items="{/EMPSet}"
+                width="500px"
+            >
+                <StandardListItem
+                    title="{Userid}"
+                    description="{Firstname} {Lastname}"
+                    counter="{Salary}"
+                    info="{Emailid}"
+                />
+            </List>
+        </content>
+    </Page>
+</mvc:View>
